@@ -2,18 +2,17 @@
 // There is an example built into the Arduino IDE very similar to this called "blink.ino".
 
 // In C++, variables must be declared with a data type (we will learn more about data types later).
-int LEDPin;
-
-// Now, the variable can be initialized, which means a value can be assigned to it.
-LEDPin = 13; // The Arduino Uno has an LED attached to digital i/o pin 13.
-
-// Alternatively, a variable can be declared and initialized at the same time like this:
-// int LEDPin = 13;
+// They must also be initialized, which means a value is assigned to it.
+// This can happen at the same time like below or later in the setup or loop functions.
+int LEDPin = 13;
 
 // All Arduino sketches have a setup function like the following. This function runs exactly once
 // when the Arduino powers up. It is used to set up the device and initialize certain 
-// functions and processes. Note that in general variables defined inside a function are not available
-// outside of the funciton. 
+// functions and processes. 
+// NOTE: In general variables defined inside a function are not available outside of the funciton. 
+// This is referred to as variable "scope". A variable defined outside of the setup and loop functions.
+// like LEDPin above has global scope, which means it can be accessed anywhere.
+
 void setup() {
   // initiallize LEDPin, which is a digital pin, as an output. 
   // Outputs can safely source or sink up to 20 mA of electric current.
@@ -22,6 +21,7 @@ void setup() {
 
 // All Arduino sketches have a loop function like the following. This function runs 
 // over and over again until the Arduino loses power.
+
 void loop() {
   // digitalWrite() is a built-in function that sets digital pins on the Arduino to high voltage
   // or low voltage. Here this translates to turning the LED connected to pin 13 on or off.
