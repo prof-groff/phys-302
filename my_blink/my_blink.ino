@@ -1,4 +1,3 @@
-
 // Text following double forward slashes are comments in C++.
 // There is an example built into the Arduino IDE very similar to this called "blink.ino".
 
@@ -24,7 +23,7 @@ void setup() {
 // All Arduino sketches have a loop function like the following. This function runs 
 // over and over again until the Arduino loses power.
 void loop() {
-  // digitalWrite() is a builtin function that sets digital pins on the Arduino to high voltage
+  // digitalWrite() is a built-in function that sets digital pins on the Arduino to high voltage
   // or low voltage. Here this translates to turning the LED connected to pin 13 on or off.
   digitalWrite(LEDPin, HIGH); // turn the LED on by setting the voltage level HIGH (5V)
   delay(1000); // wait 1000 ms or 1 s
