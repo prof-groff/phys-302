@@ -1,2 +1,1 @@
-# phys-302
-Physical Computing
+# PHYS 302 - Physical Computing
